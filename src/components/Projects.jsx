@@ -75,12 +75,25 @@ const projects = [
 
 const Projects = ({ darkMode }) => {
   const [currentPage, setCurrentPage] = useState(0);
-  const projectsPerPage = 2;
+  const [projectsPerPage, setProjectsPerPage] = useState(3);
   const totalPages = Math.ceil(projects.length / projectsPerPage);
 
-  const handlePageChange = (index) => {
-    setCurrentPage(index);
-  };
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth <= 640) {
+        setProjectsPerPage(1);
+      } else if (window.innerWidth <= 1024) {
+        setProjectsPerPage(2);
+      } else {
+        setProjectsPerPage(3);
+      }
+    };
+
+    window.addEventListener('resize', handleResize);
+    handleResize();
+
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -88,6 +101,10 @@ const Projects = ({ darkMode }) => {
     }, 50000);
     return () => clearInterval(interval);
   }, [totalPages]);
+
+  const handlePageChange = (index) => {
+    setCurrentPage(index);
+  };
 
   const startIndex = currentPage * projectsPerPage;
   const currentProjects = projects.slice(startIndex, startIndex + projectsPerPage);
