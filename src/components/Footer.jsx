@@ -27,74 +27,65 @@ const Footer = ({ darkMode }) => {
 
     return (
         <footer className={`py-8 px-4 md:py-16 md:px-8 text-center ${darkMode ? 'bg-black text-white bg-opacity-50' : 'bg-white text-black'}`}>
-            <h2 className="text-xl md:text-2xl font-bold mb-4">GET IN TOUCH</h2>
+            <h2 className="text-xl md:text-2xl font-bold mb-4 mt-12">GET IN TOUCH</h2>
             <p className={`mb-6 md:mb-10 ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>You can contact me via:</p>
-            <section id="contact" className="flex flex-col md:flex-row items-center justify-center space-y-8 md:space-y-0 md:space-x-10 mb-8 md:mb-12">
-                {/* Icons Column */}
-                <div className="flex flex-col items-center space-y-4 w-full md:w-1/4 mb-8 md:mb-0">
+            <section id="contact" className="flex flex-col items-center justify-center space-y-8 mb-2 ">
+                <div className="flex flex-col items-center  w-full  mb-8 md:mb-0">
+                    <form
+                        onSubmit={handleSubmit}
+                        className="flex flex-col items-center  space-y-4 w-full max-w-lg mx-4"
+                    >
+                        <input
+                            type="text"
+                            name="name"
+                            value={formData.name}
+                            onChange={handleChange}
+                            placeholder="Your Name"
+                            required
+                            className={`p-3 px-14 border rounded-md ${darkMode ? 'bg-gray-700 bg-opacity-50 text-white border-gray-600' : 'bg-gray-100 text-black border-gray-300'} focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-gray-300`}
+                        />
+                        <input
+                            type="email"
+                            name="email"
+                            value={formData.email}
+                            onChange={handleChange}
+                            placeholder="Your Email"
+                            required
+                            className={`p-3 px-14 border rounded-md ${darkMode ? 'bg-gray-700 bg-opacity-50 text-white border-gray-600' : 'bg-gray-100 text-black border-gray-300'} focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-gray-300`}
+                        />
+                        <textarea
+                            name="description"
+                            value={formData.description}
+                            onChange={handleChange}
+                            placeholder="Your Message"
+                            rows="4"
+                            required
+                            className={`p-3 px-16 border rounded-md ${darkMode ? 'bg-gray-700 bg-opacity-50 text-white border-gray-600' : 'bg-gray-100 text-black border-gray-300'} focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-gray-300`}
+                        ></textarea>
+                        <button
+                            type="submit"
+                            className={`px-32 py-3 rounded-md ${darkMode ? 'bg-black text-white hover:bg-gradient-to-r from-gray-900 to-gray-500' : 'bg-black text-white hover:bg-gradient-to-r from-gray-800 to-gray-400'} transition-colors duration-300`}
+                        >
+                            Send
+                        </button>
+                    </form>
+                </div>    
+                <div className="flex flex-row  space-x-4 items-center">
                     {[
                         { href: "http://www.linkedin.com/in/mnahil-naseer-847455282", icon: "fa-linkedin" },
                         { href: "https://www.instagram.com/mna._.hil?utm_source=qr&igsh=emlhN3Rwam5tNnQz", icon: "fa-instagram" },
                         { href: "tel:+92 336-7378148", icon: "fa-facebook" },
-                    ].map((item, index) => (
-                        <a key={index} href={item.href} className={`transition-colors duration-300 ${darkMode ? 'text-white hover:text-gray-400' : 'text-black hover:text-gray-600'}`}>
-                            <i className={`fa ${item.icon} text-3xl md:text-4xl`}></i>
-                        </a>
-                    ))}
-                </div>
-                {/* Form */}
-                <form
-                    onSubmit={handleSubmit}
-                    className="flex flex-col items-center space-y-4 w-full md:w-1/2 max-w-lg mx-4"
-                >
-                    <input
-                        type="text"
-                        name="name"
-                        value={formData.name}
-                        onChange={handleChange}
-                        placeholder="Your Name"
-                        required
-                        className={`p-3 px-10 border rounded-md ${darkMode ? 'bg-gray-800 text-white border-gray-600' : 'bg-gray-100 text-black border-gray-300'} focus:outline-none focus:ring-2 focus:ring-blue-500`}
-                    />
-                    <input
-                        type="email"
-                        name="email"
-                        value={formData.email}
-                        onChange={handleChange}
-                        placeholder="Your Email"
-                        required
-                        className={`p-3 px-10 border rounded-md ${darkMode ? 'bg-gray-800 text-white border-gray-600' : 'bg-gray-100 text-black border-gray-300'} focus:outline-none focus:ring-2 focus:ring-blue-500`}
-                    />
-                    <textarea
-                        name="description"
-                        value={formData.description}
-                        onChange={handleChange}
-                        placeholder="Your Message"
-                        rows="4"
-                        required
-                        className={`p-3 px-12 border rounded-md ${darkMode ? 'bg-gray-800 text-white border-gray-600' : 'bg-gray-100 text-black border-gray-300'} focus:outline-none focus:ring-2 focus:ring-blue-500`}
-                    ></textarea>
-                    <button
-                        type="submit"
-                        className={`px-64 py-3 rounded-md ${darkMode ? 'bg-blue-600 text-white hover:bg-blue-700' : 'bg-blue-500 text-white hover:bg-blue-600'} transition-colors duration-300`}
-                    >
-                        Send
-                    </button>
-                </form>
-                {/* Icons Column */}
-                <div className="flex flex-col items-center space-y-4 w-full md:w-1/4 mb-8 md:mb-0">
-                    {[
                         { href: "tel:+92 336-7378148", icon: "fa-phone" },
                         { href: "mailto:mnahilnaseer@gmail.com", icon: "fa-envelope" },
                         { href: "https://github.com/Mnahil-Naseer", icon: "fa-github" },
                     ].map((item, index) => (
                         <a key={index} href={item.href} className={`transition-colors duration-300 ${darkMode ? 'text-white hover:text-gray-400' : 'text-black hover:text-gray-600'}`}>
-                            <i className={`fa ${item.icon} text-3xl md:text-4xl`}></i>
+                            <i className={`fa ${item.icon} text-xl`}></i>
                         </a>
                     ))}
-                </div>
+                </div>            
             </section>
-            <div className={`text-sm ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
+            <div className={`text-sm -bottom-0 fixed ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
                 © 2024 MNfolio. All Rights Reserved
             </div>
         </footer>

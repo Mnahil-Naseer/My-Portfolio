@@ -9,6 +9,7 @@ import photography from '../assets/img/photgraphy.png';
 import ECommerce from '../assets/img/Crafty-Commerce.png';
 import ToDo from '../assets/img/ToDoList.png';
 import zencodez from '../assets/img/image.png';
+import portfolio from '../assets/img/portfolio.jpg'
 
 const projects = [
   {
@@ -24,15 +25,21 @@ const projects = [
     link: 'https://zencodez.vercel.app/',
   },
   {
+    img: portfolio,
+    title: 'Portfolio',
+    description: 'My Portfolio, showcasing my skills and expertise.',
+    link: 'https://zencodez.vercel.app/',
+  },
+  {
     img: counseling,
     title: 'Counseling Services',
-    description: 'A project related to psychology, made using HTML, CSS, and JavaScript.',
+    description: 'A, made using HTML, CSS, and JavaScript.',
     link: '#',
   },
   {
     img: photography,
     title: 'Photography',
-    description: 'A project showcasing photography, created with HTML, CSS, and JavaScript.',
+    description: 'A photography project, created with HTML, CSS, and JavaScript.',
     link: '#',
   },
   {
@@ -98,7 +105,7 @@ const Projects = ({ darkMode }) => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentPage((prevPage) => (prevPage + 1) % totalPages);
-    }, 50000);
+    }, 5000);
     return () => clearInterval(interval);
   }, [totalPages]);
 
@@ -110,7 +117,7 @@ const Projects = ({ darkMode }) => {
   const currentProjects = projects.slice(startIndex, startIndex + projectsPerPage);
 
   return (
-    <section id="projects" className={`py-16 px-6 md:px-28 mb-5 ${darkMode ? 'bg-black bg-opacity-50 text-white' : 'bg-white text-black'}`}>
+    <section id="projects" className={`py-16 px-6 md:px-28  ${darkMode ? 'bg-black bg-opacity-50 text-white' : 'bg-white text-black'}`}>
       <div className="container mx-auto text-center">
         <h2 className="text-4xl font-bold mb-5">My Projects</h2>
         <p className="text-lg mb-9 max-w-3xl mx-auto">
@@ -121,16 +128,16 @@ const Projects = ({ darkMode }) => {
             {currentProjects.map((project, index) => (
               <div
                 key={index}
-                className={`p-9 rounded animate-slideDown transform transition-transform duration-500 ease-in-out ${darkMode ? 'bg-gray-800 shadow-inner shadow-gray-900 hover:bg-gradient-to-t from-gray-900 via-gray-600 to-white text-white' : 'bg-gray-200 shadow-inner shadow-gray-400 hover:bg-gradient-to-b from-gray-700 via-gray-500 to-white text-black'} slide-down`}
+                className={`p-9 rounded animate-slideDown  ${darkMode ? 'bg-gray-800 shadow-inner shadow-gray-900 hover:bg-gradient-to-t from-gray-900 via-gray-600 to-white text-white' : 'bg-gray-200 shadow-inner shadow-gray-400 hover:bg-gradient-to-b from-gray-700 via-gray-500 to-white text-black'} `}
               >
                 <img
                   src={project.img}
                   alt={project.title}
-                  className="h-44 w-full object-fill rounded mb-4"
+                  className="h-36 max-w-64 object-fill rounded mb-4"
                 />
                 <h3 className="text-2xl font-semibold mb-2">{project.title}</h3>
                 <p className="mb-4">{project.description}</p>
-                <a href={project.link} className="text-blue-800 hover:text-blue-400">View Project</a>
+                <a href={project.link} className="text-blue-300 hover:text-blue-600 hover:underline hover:underline-offset-4">View Project</a>
               </div>
             ))}
           </div>

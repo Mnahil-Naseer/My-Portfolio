@@ -12,8 +12,8 @@ const Expertise = ({ darkMode }) => {
   ];
 
   return (
-    <section id="skills" className={`py-28 mb-5 ${darkMode ? 'bg-black text-white bg-opacity-50' : 'bg-white text-black'}`}>
-      <div className="mx-auto">
+    <section id="skills" className={`py-28 ${darkMode ? 'bg-black text-white bg-opacity-50' : 'bg-white text-black'}`}>
+      <div className="mx-24">
         <h2 className="text-2xl font-bold mb-8">SKILLS</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {skills.map((skill, index) => (
@@ -64,9 +64,9 @@ const Skill = ({ name, level, icon, darkMode, delay }) => {
         {icon}
         <h3 className="text-xl font-semibold ml-4">{name}</h3>
       </div>
-      <div className={`w-full rounded-full h-4 mb-4 ${darkMode ? 'bg-gray-700' : 'bg-gray-300'}`}>
+      <div className={`w-full rounded-full h-4 mb-4 ${darkMode ? 'bg-gray-600' : 'bg-gray-400'}`}>
         <div
-          className={`h-4 rounded-full transition-all duration-1000 ${isVisible ? 'w-full' : 'w-0'} ${darkMode ? 'bg-white shadow-black' : 'bg-black shadow-gray-500'}`}
+          className={`h-4 rounded-full transition-all duration-1000 ${isVisible ? 'w-full shadow-inner shadow-gray-600' : 'w-0'} ${darkMode ? 'bg-white shadow-black' : 'bg-black shadow-white'}`}
           style={{ width: isVisible ? level : '0%' }}
         ></div>
       </div>

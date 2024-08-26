@@ -9,14 +9,14 @@ const NavBar = ({ darkMode, toggleDarkMode }) => {
   };
 
   return (
-    <nav className={`flex items-center justify-between p-2 fixed w-full z-30 shadow-xl ${darkMode ? 'bg-black bg-opacity-50 text-white' : 'bg-white text-black'} transition-colors duration-300`}>
+    <nav className={`flex items-center justify-between animate-slideinLeft p-2 fixed w-full z-30 shadow-xl ${darkMode ? 'bg-black bg-opacity-50 text-white' : 'bg-white text-black'} transition-colors duration-300`}>
       <div className="flex items-center">
         <img src={me3} alt="Mnahil Naseer Logo" className="w-10 h-10 rounded-full object-cover" />
         <p className="text-lg font-bold ml-2">MNfolio</p>
       </div>
-      <div className="hidden md:flex md:items-center md:space-x-4 text-sm font-bold">
+      <div className="hidden md:flex animate-slideDown md:items-center md:space-x-4 text-sm font-bold">
         {['HOME', 'ABOUT ME', 'PROJECTS', 'SKILLS', 'CONTACT'].map((item) => (
-          <a key={item} href={`#${item.replace(' ', '').toLowerCase()}`} className="animate-slideDown hover:underline underline-offset-8 transition-transform duration-300">
+          <a key={item} href={`#${item.replace(' ', '').toLowerCase()}`} className=" hover:underline underline-offset-8 transition-transform duration-300">
             {item}
           </a>
         ))}
