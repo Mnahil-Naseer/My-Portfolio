@@ -19,7 +19,7 @@ const About = ({ darkMode }) => {
         id="home"
         className={`relative flex flex-col md:flex-row items-center h-screen ${darkMode ? 'bg-black bg-opacity-50 text-white' : 'bg-white text-black'} shadow-slate-600`}
       >
-        <div className="relative ml-2 mt-12 md:ml-24 animate-slideinLeft flex flex-col justify-center items-center md:items-start md:w-1/2 text-center md:text-left p-8">
+        <div className="relative ml-2 mt-24 md:ml-24 animate-slideinLeft flex flex-col justify-center items-center md:items-start md:w-1/2 text-center md:text-left p-8">
           <h1 className="text-3xl md:text-5xl font-bold mb-4">
             Hi,<br /> I'm Mnahil<br />
           </h1>
