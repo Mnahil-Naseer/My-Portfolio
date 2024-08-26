@@ -85,7 +85,7 @@ const Projects = ({ darkMode }) => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentPage((prevPage) => (prevPage + 1) % totalPages);
-    }, 5000);
+    }, 50000);
     return () => clearInterval(interval);
   }, [totalPages]);
 
