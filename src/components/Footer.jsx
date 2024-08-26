@@ -60,7 +60,7 @@ const Footer = ({ darkMode }) => {
                             placeholder="Your Message"
                             rows="4"
                             required
-                            className={`p-3 px-[65px] border rounded-md ${darkMode ? 'bg-gray-700 bg-opacity-50 text-white border-gray-600' : 'bg-gray-100 text-black border-gray-300'} focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-gray-300`}
+                            className={`p-3 px-[66px] border rounded-md ${darkMode ? 'bg-gray-700 bg-opacity-50 text-white border-gray-600' : 'bg-gray-100 text-black border-gray-300'} focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-gray-300`}
                         ></textarea>
                         <button
                             type="submit"
