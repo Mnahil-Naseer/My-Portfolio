@@ -75,7 +75,7 @@ const projects = [
 
 const Projects = ({ darkMode }) => {
   const [currentPage, setCurrentPage] = useState(0);
-  const projectsPerPage = 3;
+  const projectsPerPage = 2;
   const totalPages = Math.ceil(projects.length / projectsPerPage);
 
   const handlePageChange = (index) => {
