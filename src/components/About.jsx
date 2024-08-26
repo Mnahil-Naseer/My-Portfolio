@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import m1 from '../assets/img/me10.jpg';
+import m1 from '../assets/img/me5.jpeg';
 import me3 from '../assets/img/me2.jpg';
 
 const About = ({ darkMode }) => {
@@ -19,7 +19,7 @@ const About = ({ darkMode }) => {
         id="home"
         className={`relative flex flex-col md:flex-row items-center h-screen ${darkMode ? 'bg-black bg-opacity-50 text-white' : 'bg-white text-black'} shadow-slate-600`}
       >
-        <div className="relative ml-2 mt-24 md:ml-24 animate-slideinLeft flex flex-col justify-center items-center md:items-start md:w-1/2 text-center md:text-left p-8">
+        <div className="relative ml-2 mt-8 md:mt-34 md:ml-24 animate-slideinLeft flex flex-col justify-center items-center md:items-start md:w-1/2 text-center md:text-left p-8">
           <h1 className="text-3xl md:text-5xl font-bold mb-4">
             Hi,<br /> I'm Mnahil<br />
           </h1>
@@ -41,12 +41,12 @@ const About = ({ darkMode }) => {
         id="aboutme"
         className={`mt-3 p-8 md:p-24 ${darkMode ? 'bg-black text-white bg-opacity-50' : 'bg-white text-black'}`}
       >
-        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">About Me</h2>
+        <h2 className="text-3xl md:text-4xl font-bold mb-10 text-center ">About Me</h2>
         <div className="flex flex-col md:flex-row items-center">
           <div className="w-full md:w-1/2 animate-slideinLeft flex justify-center mb-8 md:mb-0">
-            <img src={m1} alt="Mnahil Naseer" className="w-44 h-36 md:w-96 md:h-96 object-cover rounded-lg shadow-lg" />
+            <img src={m1} alt="Mnahil Naseer" className="w-44 h-44 md:w-96 md:h-96 object-cover rounded-lg shadow-lg" />
           </div>
-          <div className="w-full md:w-1/2 animate-slideinRight text-center md:text-left">
+          <div className="w-full md:w-1/2 animate-slideinRight text-justify md:text-left">
             
             <p className="text-lg mb-4">
               I'm Mnahil Naseer, a dedicated Computer Science student with a passion for web development. As an aspiring Full Stack Developer, I thrive on coding and enjoy the thrill of overcoming new challenges. My adaptability and eagerness to learn enable me to tackle diverse projects effectively.
