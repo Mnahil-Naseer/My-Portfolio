@@ -9,7 +9,7 @@ import Lottie from 'react-lottie';
 import animationData from './components/lottie4.json';
 
 function App() {
-  const [darkMode, setDarkMode] = useState(true);
+  const [darkMode, setDarkMode] = useState(false);
 
   useEffect(() => {
     const storedMode = localStorage.getItem('darkMode');
