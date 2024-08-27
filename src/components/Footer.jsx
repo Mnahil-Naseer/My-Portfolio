@@ -26,7 +26,7 @@ const Footer = ({ darkMode }) => {
     };
 
     return (
-        <footer className={`py-8 px-4 md:py-16 md:px-8 text-center ${darkMode ? 'bg-black text-white bg-opacity-50' : 'bg-white text-black'}`}>
+        <footer className={`py-8 px-4 md:py-6 md:px-8 text-center ${darkMode ? 'bg-black text-white bg-opacity-50' : 'bg-white text-black'}`}>
             <h2 className="text-xl md:text-2xl font-bold mb-4 mt-12">GET IN TOUCH</h2>
             <p className={`mb-6 md:mb-10 ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>You can contact me via:</p>
             <section id="contact" className="flex flex-col items-center justify-center space-y-8 mb-2 ">
