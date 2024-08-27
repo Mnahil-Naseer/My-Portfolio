@@ -12,7 +12,7 @@ const Expertise = ({ darkMode }) => {
   ];
 
   return (
-    <section id="skills" className={`py-28 ${darkMode ? 'bg-black text-white bg-opacity-50' : 'bg-white text-black'}`}>
+    <section id="skills" className={`py-2 ${darkMode ? 'bg-black text-white bg-opacity-50' : 'bg-white text-black'}`}>
       <div className="mx-6 md:mx-24">
         <h2 className="text-2xl font-bold mb-8">SKILLS</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
