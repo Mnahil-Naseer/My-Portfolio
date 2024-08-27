@@ -93,7 +93,7 @@ const About = ({ darkMode }) => {
           <div className={`w-full md:w-1/2 flex justify-center mb-8 md:mb-0 transition-opacity duration-1000 ${aboutInView ? 'animate-slideinLeft opacity-100' : 'opacity-0'}`}>
             <img src={m1} alt="Mnahil Naseer" className="w-44 h-56 md:w-96 md:h-96 object-cover rounded-lg shadow-lg shadow-gray-700" />
           </div>
-          <div className={`w-full md:w-1/2 bg-black bg-opacity-30 text-justify md:text-left transition-opacity duration-1000 ${aboutInView ? 'animate-slideinRight opacity-100' : 'opacity-0'}`}>
+          <div className={`w-full md:w-1/2 ${darkMode?'bg-black bg-opacity-30':'bg-white'}  text-justify md:text-left transition-opacity duration-1000 ${aboutInView ? 'animate-slideinRight opacity-100' : 'opacity-0'}`}>
             <p className="text-lg mb-4 m-4">
               I'm Mnahil Naseer, a dedicated Computer Science student with a passion for web development. As an aspiring Full Stack Developer, I thrive on coding and enjoy the thrill of overcoming new challenges. My adaptability and eagerness to learn enable me to tackle diverse projects effectively.
             </p>
