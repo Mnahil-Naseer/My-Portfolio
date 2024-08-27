@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa'; // Import the icons
 import counseling from '../assets/img/counseling.png';
 import wordcounter from '../assets/img/word counter.png';
 import foodfusion from '../assets/img/food fusion.png';
@@ -9,7 +10,7 @@ import photography from '../assets/img/photgraphy.png';
 import ECommerce from '../assets/img/Crafty-Commerce.png';
 import ToDo from '../assets/img/ToDoList.png';
 import zencodez from '../assets/img/image.png';
-import portfolio from '../assets/img/portfolio.jpg'
+import portfolio from '../assets/img/portfolio.jpg';
 
 const projects = [
   {
@@ -28,7 +29,7 @@ const projects = [
     img: portfolio,
     title: 'Portfolio',
     description: 'My Portfolio, showcasing my skills and expertise.',
-    link: 'https://zencodez.vercel.app/',
+    link: 'https://mnahil-portfolio.vercel.app/',
   },
   {
     img: counseling,
@@ -69,7 +70,7 @@ const projects = [
   {
     img: rocpaperscissor,
     title: 'Rock-Paper-Scissors',
-    description: 'A Rock-Paper-Scissors game, developed with HTML, Tailwind CSS, and JavaScript.',
+    description: 'A Rock-Paper-Scissors game, built with HTML, Tailwind CSS, and JS.',
     link: 'https://mnahil-naseer.github.io/Rock-Paper-Scissor-/',
   },
   {
@@ -117,27 +118,46 @@ const Projects = ({ darkMode }) => {
   const currentProjects = projects.slice(startIndex, startIndex + projectsPerPage);
 
   return (
-    <section id="projects" className={`py-16 px-6 md:px-28  ${darkMode ? 'bg-black bg-opacity-50 text-white' : 'bg-white text-black'}`}>
+    <section id="projects" className={`py-16 px-6 md:px-28 ${darkMode ? 'bg-black bg-opacity-50 text-white' : 'bg-white text-black'}`}>
       <div className="container mx-auto text-center">
         <h2 className="text-4xl font-bold mb-5">My Projects</h2>
         <p className="text-lg mb-9 max-w-3xl mx-auto">
           Discover my projects, showcasing my skills in web development.
         </p>
         <div className="relative">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1  md:grid-cols-2 lg:grid-cols-3 gap-8">
             {currentProjects.map((project, index) => (
               <div
                 key={index}
-                className={`p-9 rounded animate-slideDown  ${darkMode ? 'bg-gray-800 shadow-inner shadow-gray-900 hover:bg-gradient-to-t from-gray-900 via-gray-600 to-white text-white' : 'bg-gray-200 shadow-inner shadow-gray-400 hover:bg-gradient-to-b from-gray-700 via-gray-500 to-white text-black'} `}
+                className={`relative p-7  rounded  ${darkMode ? 'bg-gray-800 shadow-inner shadow-gray-900 text-white hover:bg-gradient-to-t from-gray-900 to-gray-300' : 'bg-gray-200 shadow-inner shadow-gray-400 text-black hover:bg-gradient-to-b from-gray-800 to-gray-300'}`}
               >
-                <img
-                  src={project.img}
-                  alt={project.title}
-                  className="h-36 max-w-64 object-fill rounded mb-4"
-                />
+                <div className="relative">
+                  <img
+                    src={project.img}
+                    alt={project.title}
+                    className="w-full h-48 object-cover rounded mb-4"
+                  />
+                  <div className="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100  bg-black bg-opacity-50 rounded">
+                    <a
+                      href="https://github.com/Mnahil-Naseer"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-3xl text-white hover:text-gray-300 mx-2"
+                    >
+                      <FaGithub />
+                    </a>
+                    <a
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-3xl text-white hover:text-gray-300 mx-2"
+                    >
+                      <FaExternalLinkAlt />
+                    </a>
+                  </div>
+                </div>
                 <h3 className="text-2xl font-semibold mb-2">{project.title}</h3>
                 <p className="mb-4">{project.description}</p>
-                <a href={project.link} className="text-blue-300 hover:text-blue-600 hover:underline hover:underline-offset-4">View Project</a>
               </div>
             ))}
           </div>

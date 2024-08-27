@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import m1 from '../assets/img/me5.jpeg';
 import me3 from '../assets/img/me2.jpg';
+import cv from '../assets/img/Resume.jpg'; // Make sure to add your CV file path here
 
 const About = ({ darkMode }) => {
   const [index, setIndex] = useState(0);
@@ -99,9 +100,16 @@ const About = ({ darkMode }) => {
             <p className="text-lg mb-4">
               With hands-on experience in various programming languages and frameworks, I am committed to growing my skills and contributing to innovative web solutions. I look forward to a future where I can leverage my expertise to develop impactful and dynamic web applications.
             </p>
-            <button className={`mt-4 px-6 py-3 shadow-inner ${darkMode ? 'bg-black text-white hover:bg-gradient-to-r from-gray-900 to-gray-500 ' : 'bg-black text-white hover:bg-gradient-to-br from-gray-800  to-slate-400 '} shadow-slate-700 rounded-lg`}>
+            <div className='space-x-24 md:space-x-40 flex flex-row'>
+            <button className={`mt-4 px-4 py-2 md:px-6 md:py-3 shadow-inner ${darkMode ? 'bg-black text-white hover:bg-gradient-to-r from-gray-900 to-gray-500 ' : 'bg-black text-white hover:bg-gradient-to-br from-gray-800  to-slate-400 '} shadow-slate-700 rounded-lg`}>
               <a href="#projects">MY PROJECTS</a>
             </button>
+            <a href={cv} download="Mnahil_Naseer_CV.pdf">
+              <button className={`mt-4 px-4 py-2 md:px-6 md:py-3 shadow-inner ${darkMode ? 'bg-black text-white hover:bg-gradient-to-r from-gray-900 to-gray-500 ' : 'bg-black text-white hover:bg-gradient-to-br from-gray-800  to-slate-400 '} shadow-slate-700 rounded-lg`}>
+                Download CV
+              </button>
+            </a>
+            </div>
           </div>
         </div>
       </section>
