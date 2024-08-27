@@ -93,16 +93,16 @@ const About = ({ darkMode }) => {
           <div className={`w-full md:w-1/2 flex justify-center mb-8 md:mb-0 transition-opacity duration-1000 ${aboutInView ? 'animate-slideinLeft opacity-100' : 'opacity-0'}`}>
             <img src={m1} alt="Mnahil Naseer" className="w-44 h-56 md:w-96 md:h-96 object-cover rounded-lg shadow-lg shadow-gray-700" />
           </div>
-          <div className={`w-full md:w-1/2 text-justify md:text-left transition-opacity duration-1000 ${aboutInView ? 'animate-slideinRight opacity-100' : 'opacity-0'}`}>
-            <p className="text-lg mb-4">
+          <div className={`w-full md:w-1/2 bg-black bg-opacity-30 text-justify md:text-left transition-opacity duration-1000 ${aboutInView ? 'animate-slideinRight opacity-100' : 'opacity-0'}`}>
+            <p className="text-lg mb-4 m-4">
               I'm Mnahil Naseer, a dedicated Computer Science student with a passion for web development. As an aspiring Full Stack Developer, I thrive on coding and enjoy the thrill of overcoming new challenges. My adaptability and eagerness to learn enable me to tackle diverse projects effectively.
             </p>
-            <p className="text-lg mb-4">
+            <p className="text-lg mb-4 m-4">
               With hands-on experience in various programming languages and frameworks, I am committed to growing my skills and contributing to innovative web solutions. I look forward to a future where I can leverage my expertise to develop impactful and dynamic web applications.
             </p>
-            <div className='space-x-24 md:space-x-40 flex flex-row'>
+            <div className='space-x-24 md:space-x-40 flex flex-row m-4'>
             <button className={`mt-4 px-4 py-2 md:px-6 md:py-3 shadow-inner ${darkMode ? 'bg-black text-white hover:bg-gradient-to-r from-gray-900 to-gray-500 ' : 'bg-black text-white hover:bg-gradient-to-br from-gray-800  to-slate-400 '} shadow-slate-700 rounded-lg`}>
-              <a href="#projects">MY PROJECTS</a>
+              <a href="#projects">PROJECTS</a>
             </button>
             <a href={cv} download="Mnahil_Naseer_CV.pdf">
               <button className={`mt-4 px-4 py-2 md:px-6 md:py-3 shadow-inner ${darkMode ? 'bg-black text-white hover:bg-gradient-to-r from-gray-900 to-gray-500 ' : 'bg-black text-white hover:bg-gradient-to-br from-gray-800  to-slate-400 '} shadow-slate-700 rounded-lg`}>
