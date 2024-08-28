@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import m1 from '../assets/img/me5.jpeg';
 import me3 from '../assets/img/me2.jpg';
-import cv from '../assets/img/Resume.jpg'; // Make sure to add your CV file path here
+import cv from '../assets/img/Mnahil_Naseer_CV.pdf'; // Make sure to add your CV file path here
 
 const About = ({ darkMode }) => {
   const [index, setIndex] = useState(0);
