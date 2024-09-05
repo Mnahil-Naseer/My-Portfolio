@@ -138,11 +138,11 @@ const Projects = ({ darkMode }) => {
                 key={index}
                 className={`relative p-7  rounded  ${darkMode ? 'bg-gray-800 shadow-inner shadow-gray-900 text-white hover:bg-gradient-to-t from-gray-900 to-gray-300' : 'bg-gray-200 shadow-inner shadow-gray-400 text-black hover:bg-gradient-to-b from-gray-800 to-gray-300'}`}
               >
-                <div className="relative">
+                <div className="relative ">
                   <img
                     src={project.img}
                     alt={project.title}
-                    className="w-full h-48 object-cover rounded mb-4"
+                    className="object-cover rounded mb-4"
                   />
                   <div className="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100  bg-black bg-opacity-50 rounded">
                     <a
