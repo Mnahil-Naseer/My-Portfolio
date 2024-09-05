@@ -11,6 +11,7 @@ import ECommerce from '../assets/img/Crafty-Commerce.png';
 import ToDo from '../assets/img/ToDoList.png';
 import zencodez from '../assets/img/image.png';
 import portfolio from '../assets/img/portfolio.jpg';
+import Emart from '../assets/img/E-mart.jpg';
 
 const projects = [
   {
@@ -24,6 +25,12 @@ const projects = [
     title: 'ZenCodeZ',
     description: 'An IT Company website, created using React.js and TailwindCSS.',
     link: 'https://zencodez.vercel.app/',
+  },
+  {
+    img: Emart,
+    title: 'E-Mart',
+    description: 'An E-Commerce website, created using React.js and TailwindCSS.',
+    link: 'https://emart112233.vercel.app/',
   },
   {
     img: portfolio,
