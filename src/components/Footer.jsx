@@ -74,8 +74,6 @@ const Footer = ({ darkMode }) => {
                     {[
                         { href: "http://www.linkedin.com/in/mnahil-naseer-847455282", icon: "fa-linkedin" },
                         { href: "https://www.instagram.com/mna._.hil?utm_source=qr&igsh=emlhN3Rwam5tNnQz", icon: "fa-instagram" },
-                        { href: "tel:+92 336-7378148", icon: "fa-facebook" },
-                        { href: "tel:+92 336-7378148", icon: "fa-phone" },
                         { href: "mailto:mnahilnaseer@gmail.com", icon: "fa-envelope" },
                         { href: "https://github.com/Mnahil-Naseer", icon: "fa-github" },
                     ].map((item, index) => (

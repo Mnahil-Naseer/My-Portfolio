@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 import Footer from './components/Footer';
 import NavBar from './components/NavBar';
 import Projects from './components/Projects';
 import About from './components/About';
-import Expertise from './components/Expertise';
+import AboutMe from './components/AboutMe';
 import Lottie from 'react-lottie';
 import animationData from './components/lottie4.json';
 
@@ -33,18 +34,22 @@ function App() {
   };
 
   return (
-    <div className={darkMode ? '' : 'bg-white'}>
-      <div className="lottie-background">
-        <Lottie options={defaultOptions} />
+    <Router>
+      <div className={darkMode ? 'dark-mode' : 'bg-white'}>
+        <div className="lottie-background">
+          <Lottie options={defaultOptions} />
+        </div>
+        <div className="content">
+          <NavBar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
+          <Routes>
+            <Route path="/" element={<About darkMode={darkMode} />} />
+            <Route path="/projects" element={<Projects darkMode={darkMode} />} />
+            <Route path="/about" element={<AboutMe darkMode={darkMode} />} />
+          </Routes>
+          <Footer darkMode={darkMode} />
+        </div>
       </div>
-      <div className="content">
-        <NavBar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
-        <About darkMode={darkMode} />
-        <Projects darkMode={darkMode} />
-        <Expertise darkMode={darkMode} />
-        <Footer darkMode={darkMode} />
-      </div>
-    </div>
+    </Router>
   );
 }
 
