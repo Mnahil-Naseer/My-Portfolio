@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import me3 from '../assets/img/me2.jpg';
 import { FaDownload } from 'react-icons/fa';
-import cv from '../assets/img/Mnahil Naseer.pdf.pdf';
+import cv from '../assets/img/Resume.pdf.pdf';
 
 const NavBar = ({ darkMode, toggleDarkMode }) => {
   const [isOpen, setIsOpen] = useState(false);
