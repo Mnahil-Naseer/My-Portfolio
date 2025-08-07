@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import m1 from '../assets/img/me5.jpeg';
-import me3 from '../assets/img/me2.jpg';
+import m1 from '../assets/img/me2.jpg';
 import { Link } from 'react-router-dom';
 
 const About = ({ darkMode }) => {
@@ -76,7 +75,7 @@ const About = ({ darkMode }) => {
           </button>
         </div>
         <img
-          src={me3}
+          src={m1}
           alt="Mnahil Naseer"
           ref={imageRef}
           className={`w-72 h-72 md:w-[30%] md:h-[70%] rounded-full shadow-lg shadow-gray-700 mt-10 md:mt-0 object-cover transition-opacity duration-1000 ${homeInView ? 'animate-slideinRight opacity-100' : 'opacity-0'}`}
@@ -89,21 +88,18 @@ const About = ({ darkMode }) => {
         className={`p-8 md:p-20 ${darkMode ? 'bg-black text-white bg-opacity-50' : 'bg-white text-black'} transition-opacity duration-1000 ${aboutInView ? 'opacity-100' : 'opacity-0'}`}
       >
         <h2 className="text-3xl md:text-4xl font-bold mb-10 text-center">About Me</h2>
-        <div className="flex flex-col md:flex-row items-center">
-          <div className={`w-full md:w-1/2 flex justify-center mb-8 md:mb-0 transition-opacity duration-1000 ${aboutInView ? 'animate-slideinLeft opacity-100' : 'opacity-0'}`}>
-            <img src={m1} alt="Mnahil Naseer" className="w-44 h-56 md:w-96 md:h-96 object-cover rounded-lg shadow-lg shadow-gray-700" />
-          </div>
-          <div className={`w-full md:w-1/2 ${darkMode?'bg-black bg-opacity-30':'bg-white'}  text-justify md:text-left transition-opacity duration-1000 ${aboutInView ? 'animate-slideinRight opacity-100' : 'opacity-0'}`}>
-            <p className="text-lg mb-4 m-4">
+        <div className="flex center">
+          <div className={`w-full center md:w-1/2 ${darkMode?'bg-black bg-opacity-30':'bg-white'}  text-justify md:text-left transition-opacity duration-1000 ${aboutInView ? 'animate-slideinRight opacity-100' : 'opacity-0'}`}>
+            <p className="text-lg mb-4 m-4 center ">
               I'm Mnahil Naseer, a dedicated Computer Science student with a passion for web development. As an aspiring Full Stack Developer, I thrive on coding and enjoy the thrill of overcoming new challenges. My adaptability and eagerness to learn enable me to tackle diverse projects effectively.
             </p>
             <p className="text-lg mb-4 m-4">
               With hands-on experience in various programming languages and frameworks, I am committed to growing my skills and contributing to innovative web solutions. I look forward to a future where I can leverage my expertise to develop impactful and dynamic web applications.
             </p>
             <Link to="/About" className="text-lg mb-4 m-4">
-            <p>
+            <strong className="text-purple-500 hover:underline">
                more..
-              </p>
+            </strong>
             </Link>
           </div>
         </div>
