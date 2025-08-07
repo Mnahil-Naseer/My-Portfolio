@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FaProjectDiagram, FaDownload } from 'react-icons/fa';
-import cv from '../assets/img/Mnahil Naseer.pdf.pdf'; // Make sure to add your CV file path here
+import cv from '../assets/img/Resume.pdf.pdf'; // Make sure to add your CV file path here
 import Expertise from './Expertise';
 import { Link } from 'react-router-dom';
 
@@ -56,7 +56,7 @@ const HeroSection = ({ darkMode }) => {
                     <Link to="/projects" className={`flex items-center gap-2 px-6 py-3 rounded-full font-semibold shadow-lg transition duration-300 ${darkMode ? 'bg-gray-700 text-white hover:bg-gray-600' : 'bg-purple-600 text-white hover:bg-purple-500'}`}>
                         <FaProjectDiagram className="text-lg" /> View My Work
                     </Link>
-                    <a href={cv} download="Resume.pdf.pdf" className={`flex items-center gap-2 px-6 py-3 rounded-full font-semibold shadow-lg transition duration-300 ${darkMode ? 'bg-gray-700 text-white hover:bg-gray-600' : 'bg-gray-900 text-white hover:bg-gray-800'}`}>
+                    <a href={cv} download="Mnahil_Naseer_pdf" className={`flex items-center gap-2 px-6 py-3 rounded-full font-semibold shadow-lg transition duration-300 ${darkMode ? 'bg-gray-700 text-white hover:bg-gray-600' : 'bg-gray-900 text-white hover:bg-gray-800'}`}>
                         <FaDownload className="text-lg" /> Download CV
                     </a>
                 </div>
